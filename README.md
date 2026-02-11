@@ -90,27 +90,29 @@ public class RazorpayProcessor : BasePaymentProcessor
 
 # 🧠 Real Enterprise Decision Rule
 
-  Scenario                             Use Interface   Use Abstract Class
-  ------------------------------------ --------------- --------------------
-  Define contract                      ✅              ❌
-  Shared logic                         ❌              ✅
-  Dependency injection                 ✅              ⚠️
-  Code reuse                           ❌              ✅
-  Multiple unrelated implementations   ✅              ❌
-  Same family of classes               ❌              ✅
+| Scenario | Use Interface | Use Abstract Class |
+|---|---|---|
+| Define contract | ✅ | ❌ |
+| Shared logic | ❌ | ✅ |
+| Dependency injection | ✅ | ⚠️ |
+| Code reuse | ❌ | ✅ |
+| Multiple unrelated implementations | ✅ | ❌ |
+| Same family of classes | ❌ | ✅ |
+
 
 ------------------------------------------------------------------------
 
-# 🎯 Interview-Ready Answer
 
-Yes, payment processor can be created using interface.
+# 🎯 Interview-Ready Explanation
 
-But when common logic like logging, validation, retry, and configuration
-is required, abstract class is used to avoid duplication.
-
-In real .NET systems, both interface and abstract class are used
-together: - Interface → flexibility & DI - Abstract → code reuse & base
-behavior - Implementation → actual business logic
+-   Interface is used to define a contract and enable loose coupling via
+    dependency injection.
+-   Abstract class is used when we want to share common logic, state, or
+    behavior across related classes.
+-   In real .NET systems, both are often used together:
+    -   Interface → flexibility & DI
+    -   Abstract → code reuse & base behavior
+    -   Implementation → actual business logic
 
 ------------------------------------------------------------------------
 # 60-second interview answer (Interface vs Abstract Class): English Version
